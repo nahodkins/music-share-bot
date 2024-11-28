@@ -1,0 +1,10 @@
+[
+  {
+    "service_name": "Apple Music",
+    "url_regex": "https://music\\.apple\\.com/.+"
+  },
+  {
+    "service_name": "YouTube Music",
+    "url_regex": "https://music\\.youtube\\.com/.+"
+  }
+]
