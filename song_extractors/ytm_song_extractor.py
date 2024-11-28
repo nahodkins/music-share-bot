@@ -38,7 +38,10 @@ class YoutubeMusicSongExtractor(SongExtractor):
         )
 
     def get_song_url(self, song_details: SongDetails):
-        found_result = self.yt_music.search(song_details.get_song_keys())[0]
+        song_keys = song_details.get_song_keys()
+        search_str = (f"{song_keys} Album"
+                      if song_details.is_album else song_keys)
+        found_result = self.yt_music.search(search_str)[0]
 
         if song_details.is_album:
             playlist_id = found_result['playlistId']
