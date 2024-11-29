@@ -17,6 +17,7 @@ class YoutubeMusicSongExtractor(SongExtractor):
         video_id = self._get_video_id(song_url)
 
         if video_id:
+            print(f"{self.yt_music.get_song(video_id)}")
             found_result = self.yt_music.get_song(video_id)['videoDetails']
 
             song_name = found_result['title']
